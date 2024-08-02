@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Quick Post</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+    .markdown-body {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <v-app>
+      <v-container>
+        <h3>模板区域</h3>
+        <v-form @submit.prevent="onSubmit">
+          <v-text-field v-model="formData.title" label="标题" required></v-text-field>
+          <v-text-field v-model="formData.tags" label="标签"></v-text-field>
+          <v-select
+              v-model="select"
+              :hint="`${select.state}, ${select.abbr}`"
+              :items="items"
+              item-text="state"
+              item-value="abbr"
+              label="分类"
+              persistent-hint
+              return-object
+              single-line
+            ></v-select>
+        </v-form>
+    
+        <v-divider class="my-4"></v-divider>
+        <v-row>
+          <v-col cols="12" md="6">
+            <h3>Markdown预览区</h3>
+            <v-textarea v-model="markdownInput" label="输入Markdown格式文本" auto-grow></v-textarea>
+            <v-col>
+              <v-row>
+                <v-btn @click="cache" class="primary">存缓存</v-btn>
+                <v-spacer></v-spacer>
+                <v-btn color="primary" @click="translate">渲染</v-btn>
+                <v-spacer></v-spacer>        
+                <v-btn @click="loadCache" class="primary">读缓存</v-btn>
+              </v-row>
+            </v-col>
+          </v-col>
+    
+          <v-col cols="12" md="6">
+            <h3>Markdown渲染区</h3>
+            <div v-html="renderedMarkdown" class="markdown-body"></div>
+          </v-col>
+        </v-row>
+        <v-divider class="my-4"></v-divider>
+        <v-row>
+          <v-col>
+            <h3>渲染结果区</h3>
+            <v-text-field v-model="filename" label="文件名"></v-text-field>
+            <v-btn @click="copyfilename">复制文件名</v-btn>
+            <v-textarea v-model="translated" label="已渲染的内容" auto-grow></v-textarea>
+            <v-col>
+              <v-row>
+                <v-btn @click="copycontent">复制内容</v-btn>
+              </v-row>
+            </v-col>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/markdown-it/dist/markdown-it.min.js"></script>
+  
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data() {
+        return {
+          formData: {
+            title: '',
+            tags: 'brief',
+            auth: '',
+          },
+          markdownInput: '',
+          translated: '',
+          markdownRowCount: 12,
+          select: { state: 'Devops', abbr: 'dev' },
+          items: [
+            { state: 'Devops 运维', abbr: 'edv' },
+            { state: 'Document 文档', abbr: 'doc' },
+            { state: 'Article 文章', abbr: 'art' }, 
+            { state: 'Tips 技巧', abbr: 'tip' },
+            { state: 'Questions 解决方案', abbr: 'ques' },
+          ],
+        };
+      },
+      methods: {
+        cache(){
+          localStorage.setItem("cache_markdown", this.markdownInput);
+        },
+        loadCache(){
+          this.markdownInput = localStorage.getItem("cache_markdown");
+        },
+        translate(){
+          let prefix = "---\nlayout: post\ntitle: ";
+          let title = this.formData.title;
+          let categories = "categories: [Blog, " + this.select.state.split(" ")[0] + "]\n";
+          let tags = "tags: [" + this.formData.tags + "]\n";
+          let date = "date: " + this.getFormattedTimestamp() + "\n";
+          let end = "---\n";
+          this.translated = prefix + title + "\n" + categories + tags + date + end + this.markdownInput;
+          this.filename = this.getFormattedTimestamp().slice(0,10) + "-" + this.select.abbr + "-" + this.formData.title + ".md";
+        },
+        getFormattedTimestamp() {
+          const date = new Date();
+          const year = date.getFullYear();
+          const month = (date.getMonth() + 1).toString().padStart(2, '0');
+          const day = date.getDate().toString().padStart(2, '0');
+          const hours = date.getHours().toString().padStart(2, '0');
+          const minutes = date.getMinutes().toString().padStart(2, '0');
+          const timezoneOffset = -date.getTimezoneOffset();
+          const offsetHours = Math.floor(timezoneOffset / 60).toString().padStart(2, '0');
+          const offsetMinutes = (timezoneOffset % 60).toString().padStart(2, '0');
+          const timezone = `+${offsetHours}${offsetMinutes}`;
+          return `${year}-${month}-${day} ${hours}:${minutes} ${timezone}`;
+        },
+        copyfilename() {
+          navigator.clipboard.writeText(this.filename);
+        },
+        copycontent() {
+          navigator.clipboard.writeText(this.translated);
+        }
+      },
+      computed: {
+        renderedMarkdown() {
+          const md = window.markdownit();
+          return md.render(this.markdownInput);
+        }
+      }
+    })
+  </script>
+</body>
+</html>
