@@ -21,7 +21,7 @@ order: 4
 
 ## Quick Post
 
-使用快速生成[Quick Post Page](phil616.github.io/assets/qp.html)，可以生成符合格式的模板，加入到Github中即可。
+使用快速生成[Quick Post Page](https://phil616.github.io/assets/qp.html)，可以生成符合格式的模板，加入到Github中即可。
 
 ## 作者联系方式
 1. 邮箱：phil616@greenshadecapital.com
