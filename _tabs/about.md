@@ -19,6 +19,9 @@ order: 4
 > 绿荫资本已经授权`@phil616`在博客中引用绿荫资本的相关内容，详情请参考其版权共享政策。
 {: .prompt-tip }
 
+## Quick Post
+
+使用快速生成[Quick Post Page](phil616.github.io/assets/qp.html)，可以生成符合格式的模板，加入到Github中即可。
 
 ## 作者联系方式
 1. 邮箱：phil616@greenshadecapital.com
