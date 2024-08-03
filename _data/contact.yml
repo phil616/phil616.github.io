@@ -3,8 +3,9 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: Weibo
+  icon: "fab fa-weibo"
+  url: "https://weibo.com/u/7926118493"
 
 - type: email
   icon: "fas fa-envelope"
