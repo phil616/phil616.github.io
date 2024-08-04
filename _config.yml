@@ -212,6 +212,9 @@ exclude:
   - localutils  # local develop utils
   - "*.bat"  # Windows Batch Scripts
   - "*.ps1"  # Windows PowerShell Scripts
+  - "_template"
+  - "generate.py"
+  - "*.exe"
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
