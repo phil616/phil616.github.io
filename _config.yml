@@ -136,12 +136,13 @@ pwa:
     # Usually its value is the `baseurl` of another website that
     # shares the same domain name as the current website.
     deny_paths:
+      - "/assets/qp.html"
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
 
 # The base URL of your site
-baseurl: ""
+baseurl: "phil616.greenshadecapital.com"
 
 # ------------ The following options are not recommended to be modified ------------------
 
