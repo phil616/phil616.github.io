@@ -14,7 +14,7 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Article Blog # the main title
+title: phil616 Blog # the main title
 
 tagline: phil616 文章博客 # it will display as the sub-title
 
@@ -35,14 +35,14 @@ social:
   email: phil616@greenshadecapital.com # change to your email address
   links:
     - https://github.com/phil616 # change to your github homepage
-
+# <meta name="google-site-verification" content="HqxydbEEtChsRGrmdEwMoAfkJTlVKqESsHT28KKhW9s" />
 # Site Verification Settings
 webmaster_verifications:
-  google: # fill in your Google verification code
+  google: HqxydbEEtChsRGrmdEwMoAfkJTlVKqESsHT28KKhW9s # fill in your Google verification code
   bing: # fill in your Bing verification code
   alexa: # fill in your Alexa verification code
   yandex: # fill in your Yandex verification code
-  baidu: # fill in your Baidu verification code
+  baidu: codeva-C9dqxJA8WK # fill in your Baidu verification code
   facebook: # fill in your Facebook verification code
 
 # ↑ --------------------------

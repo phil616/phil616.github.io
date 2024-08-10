@@ -6,7 +6,8 @@ order: 4
 
 # 关于
 
-关于此博客
+关于此博客 
+
 
 1. 博客搭建基于[Jekyll](https://jekyllrb.com/)构建，部署在Github Pages上。
 2. 主题基于[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)
@@ -53,7 +54,12 @@ order: 4
 
 
 ## 作者联系方式
-1. 邮箱：phil616@greenshadecapital.com
+1. 邮箱
+   1.1 phil616@greenshadecapital.com
+   1.2 phil616@163.com
+2. PGP
+   2.1 GSDispatch: dispatch@greenshadecapital.com [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=4B45D9EB932D8D130778DD89CA557C41FE3EA9DF&fingerprint=on&op=index)
+   2.2 phil616: phil616@greenshadecapital.com: [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=C508897F9A12BFFF2E5D6AF65F0BEAEF7AB20C87&fingerprint=on&op=index)
 
 ## 最后一次更改
 
@@ -65,5 +71,12 @@ url: phil616.greenshadecapital.com (2024年8月10日申请)
 
 可在 `phil616.greenshadecapital.com/GSCMESSAGE.txt`中查看授权证书
 
+## 博客状态
 
-> 2024-8-5
+1. Github 仓库： [GithubPage](https://github.com/phil616/phil616.github.io)
+2. Github Page构建状态： [Actions](https://github.com/phil616/phil616.github.io/actions/)
+3. License: MIT, GSE, Creative Commons
+4. Green Shade API: [GreenShadeOpenAPI](https://api.greenshadecapital.com)
+
+
+> 2024-8-10
