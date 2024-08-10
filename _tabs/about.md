@@ -55,10 +55,14 @@ order: 4
 
 ## 作者联系方式
 1. 邮箱
+
    1.1 phil616@greenshadecapital.com
+   
    1.2 phil616@163.com
 2. PGP
+
    2.1 GSDispatch: dispatch@greenshadecapital.com [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=4B45D9EB932D8D130778DD89CA557C41FE3EA9DF&fingerprint=on&op=index)
+
    2.2 phil616: phil616@greenshadecapital.com: [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=C508897F9A12BFFF2E5D6AF65F0BEAEF7AB20C87&fingerprint=on&op=index)
 
 ## 最后一次更改
