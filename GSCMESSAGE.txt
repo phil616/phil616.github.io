@@ -1,0 +1,38 @@
+# 
+# 
+# Green Shade Capital Academy License (Archieved)
+# 
+# 
+-----MESSAGE START-----
+AT 2024-08-10 22:14:30 UTC+8:000
+With GSCA Fva3.1, Ref A9BE559163204B0087E45EBDA131DE0F
+
+A CNAME record has been added to user's domain.
+User: Fva313 (@phil616)
+Domain: phil616.github.io
+Requested Domain: 
+    Top-Level Domain (TLD): .com
+    Second-Level Domain (SLD): greenshadecapital
+    Third-Level Domain (Subdomain): phil616
+
+URL: phil616.greenshadecapital.com
+CNAME: phil616.greenshadecapital.com
+Record:
+    Type: CNAME
+    Name: phil616
+    Target/Value: phil616.github.io
+    TTL: Auto
+-----TEST-----
+DNS Provider: */* - Cloudflare
+Server: Unknown
+Address:  fe80::1
+Response: 
+    Domain: phil616.greenshadecapital.com
+Addresses:  
+    Servers:
+    2606:4700:3037::ac43:8e3e (Proxy)
+    2606:4700:3031::6815:1b64 (Proxy)
+    104.21.27.100 (Proxy)
+    172.67.142.62 (Proxy)
+-----TESTED-----
+-----MESSAGE END-----
