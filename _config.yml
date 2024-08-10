@@ -23,7 +23,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://phil616.github.io"
+url: "https://phil616.greenshadecapital.com"
 
 github:
   username: phil616 # change to your github username
@@ -35,7 +35,7 @@ social:
   email: phil616@greenshadecapital.com # change to your email address
   links:
     - https://github.com/phil616 # change to your github homepage
-# <meta name="google-site-verification" content="HqxydbEEtChsRGrmdEwMoAfkJTlVKqESsHT28KKhW9s" />
+# After the had greenshadecapital domain, seo is avaliable
 # Site Verification Settings
 webmaster_verifications:
   google: HqxydbEEtChsRGrmdEwMoAfkJTlVKqESsHT28KKhW9s # fill in your Google verification code
