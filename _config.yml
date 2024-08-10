@@ -142,7 +142,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "phil616.greenshadecapital.com"
+baseurl: "https://phil616.greenshadecapital.com"
 
 # ------------ The following options are not recommended to be modified ------------------
 
