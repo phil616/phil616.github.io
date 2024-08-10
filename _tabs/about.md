@@ -58,5 +58,12 @@ order: 4
 ## 最后一次更改
 
 详情请查询Git提交历史
+## 域名
+url: phil616.greenshadecapital.com (2024年8月10日申请)
+
+可在 `phil616.greenshadecapital.com/CNAME`中查看CNAME
+
+可在 `phil616.greenshadecapital.com/GSCMESSAGE.txt`中查看授权证书
+
 
 > 2024-8-5
