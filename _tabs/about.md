@@ -56,24 +56,21 @@ order: 4
 ## 作者联系方式
 1. 邮箱
 
-   1.1 phil616@greenshadecapital.com
+phil616@greenshadecapital.com
    
-   1.2 phil616@163.com
+phil616@163.com
 2. PGP
 
-   2.1 GSDispatch: dispatch@greenshadecapital.com [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=4B45D9EB932D8D130778DD89CA557C41FE3EA9DF&fingerprint=on&op=index)
+GSDispatch(Verified): dispatch@greenshadecapital.com [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=4B45D9EB932D8D130778DD89CA557C41FE3EA9DF&fingerprint=on&op=index)
 
-   2.2 phil616: phil616@greenshadecapital.com: [GreenShadeCapitalDispatchPubkey](https://keyserver.ubuntu.com/pks/lookup?search=C508897F9A12BFFF2E5D6AF65F0BEAEF7AB20C87&fingerprint=on&op=index)
+phil616(Verified): phil616@greenshadecapital.com: [GreenShadeCapitalPersonalPubkey](https://keyserver.ubuntu.com/pks/lookup?search=C508897F9A12BFFF2E5D6AF65F0BEAEF7AB20C87&fingerprint=on&op=index)
 
-## 最后一次更改
-
-详情请查询Git提交历史
 ## 域名
 url: phil616.greenshadecapital.com (2024年8月10日申请)
 
-可在 `phil616.greenshadecapital.com/CNAME`中查看CNAME
+可在 [`phil616.greenshadecapital.com/CNAME`](https://phil616.greenshadecapital.com/CNAME)中查看CNAME
 
-可在 `phil616.greenshadecapital.com/GSCMESSAGE.txt`中查看授权证书
+可在 [`phil616.greenshadecapital.com/GSCMESSAGE.txt`](https://phil616.greenshadecapital.com/GSCMESSAGE.txt)中查看授权证书
 
 ## 博客状态
 
@@ -82,5 +79,13 @@ url: phil616.greenshadecapital.com (2024年8月10日申请)
 3. License: MIT, GSE, Creative Commons
 4. Green Shade API: [GreenShadeOpenAPI](https://api.greenshadecapital.com)
 
+## 举报
 
-> 2024-8-11
+1. 违规和非法举报： inspection@greenshadecapital.com
+2. 维权和法律相关： legal@greenshadecapital.com
+
+> 若内容有争议或可能涉及其他非法行为，请向`consult@greenshadecapital.com`进行咨询。
+{: .prompt-info }
+
+
+> 2024-8-15
