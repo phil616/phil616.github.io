@@ -138,8 +138,8 @@ pwa:
     deny_paths:
       - "CNAME"
       - "/assets"
-      - "/meta"
-      - "/about"
+      - "/meta/"
+      - "/about/"
       # - "/assets/qp.html"
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
