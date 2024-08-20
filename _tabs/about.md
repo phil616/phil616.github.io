@@ -78,6 +78,7 @@ url: phil616.greenshadecapital.com (2024年8月10日申请)
 2. Github Page构建状态： [Actions](https://github.com/phil616/phil616.github.io/actions/)
 3. License: MIT, GSE, Creative Commons
 4. Green Shade API: [GreenShadeOpenAPI](https://api.greenshadecapital.com)
+5. API Status: Not Online
 
 ## 举报
 
