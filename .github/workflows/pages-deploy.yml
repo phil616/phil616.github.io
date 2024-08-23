@@ -39,6 +39,27 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
+       - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Set npm environment variables
+        run: |
+          echo "VUE_APP_API=${{ secrets.VUE_APP_API }}" >> $GITHUB_ENV
+          echo "VUE_APP_BASE_URL=${{ secrets.VUE_APP_BASE_URL }}" >> $GITHUB_ENV
+
+      - name: Build blog_manager
+        run: |
+          cd blog_manager
+          npm ci
+          npm run build
+
+      - name: Move dist to assets/manager
+        run: |
+          mkdir -p assets/manager
+          mv blog_manager/dist assets/manager
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
