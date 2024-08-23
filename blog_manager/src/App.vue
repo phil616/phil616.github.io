@@ -100,6 +100,19 @@ export default {
     quit() {
       logout();
     }
+  },
+  mounted() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistration().then((registration) => {
+      if (registration) {
+        console.log('ServiceWorker registration found');
+        // Service Worker已注册,可以显示一个提示或者自动注销
+        registration.unregister();
+      } else {
+        // Service Worker未注册,正常启动应用
+      }
+    });
   }
+}
 };
 </script>
