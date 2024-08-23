@@ -64,7 +64,7 @@ export default {
       )
     },
     goExtract(){
-      window.location.href = `fileextraction?ec=${this.shareCode}`;
+      this.$router.push("/"+`fileextraction?ec=${this.shareCode}`);
     },
     copyShareCode() {
       navigator.clipboard.writeText(this.shareCode).then(() => {
