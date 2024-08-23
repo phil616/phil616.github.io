@@ -52,12 +52,13 @@ jobs:
       - name: Build blog_manager
         run: |
           cd blog_manager
-          npm ci
+          npm install
           npm run build
 
       - name: Move dist to assets/manager
         run: |
           mkdir -p assets/manager
+          rm -rf assets/manager/*
           mv blog_manager/dist assets/manager
 
       - name: Setup Ruby
