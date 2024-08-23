@@ -221,6 +221,7 @@ exclude:
   - "generate.py"
   - "*.exe"
   - "db.json"  # exclue db.json for local develop
+  - blog_manager  # exclue blog_manager for local develop
   # - subsite  # a subapp for blog can be placed here
 jekyll-archives:
   enabled: [categories, tags]
