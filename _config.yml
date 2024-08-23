@@ -140,6 +140,7 @@ pwa:
       - "/assets"
       - "/meta/"
       - "/about/"
+      - /api
       # - "/assets/qp.html"
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
