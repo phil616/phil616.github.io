@@ -55,7 +55,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Move dist to assets/manager
+      - name: Move dist to subfolder
         run: |
           mkdir -p assets/manager
           rm -rf assets/manager/*
