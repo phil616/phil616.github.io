@@ -4,7 +4,7 @@ import axios from 'axios';
 const service = axios.create({
   baseURL: process.env.VUE_APP_API + "/api"
 });
-service.baseURL = process.env.VUE_APP_API;
+service.baseURL = process.env.VUE_APP_API + "/api";
 // 请求拦截器
 service.interceptors.request.use(
   config => {
