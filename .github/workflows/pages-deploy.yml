@@ -74,11 +74,10 @@ jobs:
 
       - name: Test site   # exclude: blog manager for error msg: ' At _site***/dist/index.html:1:  internally linking to ***/css/app.c92c6222.css, which does not exist'
         run: |
-          bundle exec htmlproofer _site \
+          bundle exec htmlproofer _site --ignore_files ["/assets/manager/index.html"]\
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
-            \-\-ignore_files "/^\/_site\/assets\/manager\/.*\.html/" \
-           
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
