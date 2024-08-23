@@ -59,7 +59,7 @@ jobs:
         run: |
           mkdir -p assets/manager
           rm -rf assets/manager/*
-          mv blog_manager/dist assets/manager
+          mv blog_manager/dist/* assets/manager
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
