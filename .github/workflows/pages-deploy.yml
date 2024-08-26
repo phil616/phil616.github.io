@@ -44,23 +44,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set npm environment variables
-        run: |
-          echo "VUE_APP_API=${{ secrets.VUE_APP_API }}" >> $GITHUB_ENV
-          echo "VUE_APP_BASE_URL=${{ secrets.VUE_APP_BASE_URL }}" >> $GITHUB_ENV
-
-      - name: Build blog_manager
-        run: |
-          cd blog_manager
-          npm install
-          npm run build
-
-      - name: Move dist to subfolder
-        run: |
-          mkdir -p assets/manager
-          rm -rf assets/manager/*
-          mv blog_manager/dist/* assets/manager
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -74,7 +57,7 @@ jobs:
 
       - name: Test site   # exclude: blog manager for error msg: ' At _site***/dist/index.html:1:  internally linking to ***/css/app.c92c6222.css, which does not exist'
         run: |
-          bundle exec htmlproofer _site --ignore_files ["/assets/manager/index.html"]\
+          bundle exec htmlproofer _site \
             \-\-disable-external \
             \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
 
