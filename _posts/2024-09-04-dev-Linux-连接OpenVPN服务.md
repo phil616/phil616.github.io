@@ -64,4 +64,4 @@ sudo systemctl start vmuser.service
 sudo systemctl stop vmuser.service
 ```
 
-![image-20240904132657002](..\assets\img\2024-09-04-dev-Linux-连接OpenVPN服务\image-20240904132657002.png)
+![image-20240904132657002](../assets/img/2024-09-04-dev-Linux-连接OpenVPN服务/image-20240904132657002.png)
