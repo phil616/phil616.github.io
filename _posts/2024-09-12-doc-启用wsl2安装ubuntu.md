@@ -208,3 +208,37 @@ Host wsl
 此时登录后，便可在VSCode中直接访问，终端此时也可以直接使用ubuntu终端
 
 ![image-20240912122728409](./../assets/img/2024-09-12-doc-启用wsl2安装ubuntu/image-20240912122728409.png)
+
+### 3. 使用镜像网络
+
+每次重新启动wsl时，都会出现IP飘逸，为了固定IP方便访问，可以使用镜像网络。镜像网络需要满足：
+
+* 运行 Windows 11 22H2 及更高版本的计算机上
+* WSL2的版本在2.0.0以上
+
+在用户目录下创建.wslconfig
+
+![image-20240912123354308](./../assets/img/2024-09-12-doc-启用wsl2安装ubuntu/image-20240912123354308.png)
+
+```
+[experimental]
+autoMemoryReclaim=gradual  
+networkingMode=mirrored
+dnsTunneling=true
+firewall=true
+autoProxy=true
+```
+
+重启以开启镜像网络
+
+# 参考文章
+
+https://learn.microsoft.com/zh-cn/windows/wsl/
+
+https://learn.microsoft.com/zh-cn/windows/wsl/tutorials/wsl-vscode
+
+https://zhuanlan.zhihu.com/p/593263088
+
+https://learn.microsoft.com/zh-cn/windows/wsl/compare-versions
+
+https://learn.microsoft.com/zh-cn/windows/wsl/wsl-config
