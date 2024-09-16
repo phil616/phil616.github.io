@@ -15,12 +15,7 @@ order: 4
 4. 博客内容另行标注的除外。
 5. 博客内容仅供学习参考，请勿用于商业用途。作者不承担由于不遵守上述协议而导致的法律责任。
 6. 博客交互内容采用Github API，详情参考Github政策。
-7. 涉及绿荫资本的商标/带有额外声明的内容版权与解释权归绿荫资本所有。
-
-> 绿荫资本已经授权`@phil616`在博客中引用绿荫资本的相关内容，详情请参考其版权共享政策。
-{: .prompt-tip }
-
-8. 元信息链接为： [{{ site.url }}/meta/]({{ site.url }}/)，接入信息已经签名，安全可信。
+7. 元信息链接为： [{{ site.url }}/meta/]({{ site.url }}/)，接入信息已经签名，安全可信。
 
 ## Quick Post
 
@@ -57,7 +52,7 @@ order: 4
 1. 邮箱
 
 phil616@greenshadecapital.com
-   
+
 phil616@163.com
 2. PGP
 
@@ -65,7 +60,44 @@ GSDispatch(Verified): dispatch@greenshadecapital.com [GreenShadeCapitalDispatchP
 
 phil616(Verified): phil616@greenshadecapital.com: [GreenShadeCapitalPersonalPubkey](https://keyserver.ubuntu.com/pks/lookup?search=C508897F9A12BFFF2E5D6AF65F0BEAEF7AB20C87&fingerprint=on&op=index)
 
+## AUTOGEN字段
+
+AUTOGEN字段是在每个文章前自动生成的唯一标识符，用于在搜索引擎中检索字段。
+
+由于博客内容不接入索引系统，因此使用唯一标识的AUTOGEN来实现在Google上面的唯一搜索
+
+例如在`Linux-连接OpenVPN服务`一文中，可以直接使用AUTOGEN字段来在Google中搜索该文章
+
+![image-20240917065827631](./../assets/img/about/image-20240917065827631.png)
+
+能保障搜索结果唯一且存在
+
+同理在Github中也可检索到唯一结果
+
+![image-20240917065714575](./../assets/img/about/image-20240917065714575.png)
+
+
+
+AUTOGEN可用被有限状态自动机识别，在生成格式中，AUTOGEN严格遵循如下表达式：
+
+```
+---
+> AUTOGEN xxx
+```
+
+文件开头为YAML-FRONT-MATTER头部，结尾的三个短线后紧跟换行，随后是引用标识符`>`后接一个空格，随后是32位的唯一字符串
+
+提取AUTOGEN字段的正则表达式参考：
+
+```
+\s*---\r?\n> AUTOGEN ([a-fA-F0-9]{32})
+```
+
+1. TAB栏没有AUTOGEN字段，因为TAB栏无法使用Service Worker更新
+2. AUTOGEN字段在文章生成前自动生成
+
 ## 域名
+
 url: phil616.greenshadecapital.com (2024年8月10日申请)
 
 可在 [`phil616.greenshadecapital.com/CNAME`](https://phil616.greenshadecapital.com/CNAME)中查看CNAME
@@ -89,4 +121,4 @@ url: phil616.greenshadecapital.com (2024年8月10日申请)
 {: .prompt-info }
 
 
-> 2024-8-15
+> 2024-9-17

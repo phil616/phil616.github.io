@@ -7,7 +7,7 @@ date: 2024-09-12 11:20 +0800
 ---
 > AUTOGEN 68882dee0af744ecaf96db44f30cefe6
 
-# 在Windows中使用WSL2来使用Windows
+# 在Windows中使用WSL2来使用Linux
 
 # 简介
 
