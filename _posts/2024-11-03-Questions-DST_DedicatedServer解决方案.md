@@ -257,8 +257,6 @@ https://gitee.com/CHUCHEER/script/raw/master/mod.sh
 workshop_download_item 322330 
 ```
 
- [INSTALLING_MODS.txt](..\..\..\Program Files (x86)\Steam\steamapps\common\Don't Starve Together Dedicated Server\mods\INSTALLING_MODS.txt) 
-
 ## 关于存档
 
 ## 关于MOD下载
@@ -294,6 +292,7 @@ Release:
 https://github.com/carrot-hu23/dst-admin-go/releases/download/1.3.1/dst-admin-go.1.3.1.tgz
 
 frp:
-
 https://github.com/fatedier/frp/releases/download/v0.61.0/frp_0.61.0_linux_amd64.tar.gz
+
+使用管理面板的方案依然可行，但模组下载和加载过慢的问题无法解决。
 
