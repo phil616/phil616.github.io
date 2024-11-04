@@ -1,0 +1,13 @@
+{
+    "Category":{
+        "Academy":["Courses","CPC","Advanced"],
+        "Blog":["Articles","Devops","Documents","Tips","Questions"],
+        "CyberSecurity":["Report","General","Technology"],
+        "AI":["General","AICourses"],
+        "Guidence":["CPP","Python","Java","Web"]
+    },
+    "Tags":["web","project","static","gs","tech","brief","cpc","history","memo","soluation"],
+    "Repo":"https://github.com/phil616",
+    "Blog":"https://phil616.greenshadecapital.com/",
+    "About":"https://phil616.greenshadecapital.com/about"
+}

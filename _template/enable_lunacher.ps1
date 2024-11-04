@@ -1,0 +1,1 @@
+C:/ProgramData/anaconda3/python.exe C:/Project/phil616.github.io/_template/main.py
