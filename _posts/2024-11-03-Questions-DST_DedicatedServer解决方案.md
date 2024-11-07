@@ -296,3 +296,14 @@ https://github.com/fatedier/frp/releases/download/v0.61.0/frp_0.61.0_linux_amd64
 
 使用管理面板的方案依然可行，但模组下载和加载过慢的问题无法解决。
 
++ 容器存档启动路径: /root/.klei/DoNotStarveTogether
++ 容器存档备份路径: /app/backup
++ 容器存档模组路径: /app/mod
++ 容器玩家日志路径: /app/dst-db
++ 容器服务日志路径: /app/dst-admin-go.log
++ 容器启动饥荒路径: /app/dst-dedicated-server
++ 容器启steamcmd：/app/steamcmd
+
+```bash
+docker run -d -p 8082:8082/tcp -p 10998:10998/udp -p 10999:10999/udp --name dst-admin-go hujinbo23/dst-admin-go:1.2.7
+```

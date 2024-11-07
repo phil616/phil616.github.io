@@ -224,6 +224,7 @@ exclude:
   - "*.exe"
   - "db.json"  # exclue db.json for local develop
   - blog_manager  # exclue blog_manager for local develop
+  - _image # exclude _image for PicGo
   # - subsite  # a subapp for blog can be placed here
 jekyll-archives:
   enabled: [categories, tags]

@@ -5,6 +5,7 @@ on:
       - main
       - master
     paths-ignore:
+      - _images/**
       - .gitignore
       - README.md
       - LICENSE
