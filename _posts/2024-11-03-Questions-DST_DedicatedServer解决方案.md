@@ -226,6 +226,55 @@ rem                                                        --by橙之刃21198207
 
 获得全新的`dedicated_server_mods_setup.lua`替换掉`***\Steam\steamapps\common\Don't Starve Together Dedicated Server\mods`文件夹中的文件
 
+关于获取脚本：
+
+```python
+import re
+import os
+
+DSTDS_DIR = "C:\Program Files (x86)\Steam\steamapps\common\Don't Starve Together Dedicated Server"
+
+
+def find_workshop_ids(file_path):
+    # 定义一个空列表来存储匹配的结果
+    workshop_ids = []
+    
+    # 定义正则表达式模式，匹配workshop-后跟n位数字,以"结束
+    pattern = re.compile(r'workshop-(\d{1,})')
+    
+    # 打开文件并读取内容
+    with open(file_path, 'r', encoding='utf-8') as file:
+        for line in file:
+            # 查找所有匹配的字符串
+            matches = pattern.findall(line)
+            # 将匹配的字符串添加到列表中
+            workshop_ids.extend(matches)
+    
+    return workshop_ids
+
+file_path = "modoverrides.lua"
+
+workshop_ids = find_workshop_ids(os.path.join(os.path.dirname(__file__), file_path))
+workshop_ids = list(set(workshop_ids))
+print(len(workshop_ids))
+for ids in workshop_ids:
+    print(ids)
+with open(os.path.join(os.path.dirname(__file__), "dedicated_server_mods_setup.lua"), "w", encoding="utf-8") as f:
+    for ids in workshop_ids:
+        f.write(f"ServerModSetup(\"{ids}\")\n")
+        f.write(f"ServerModCollectionSetup(\"{ids}\")\n")
+
+with open(os.path.join(os.path.dirname(__file__), "SteamCMD_workshop_download.sh"), "w", encoding="utf-8") as f:
+    for ids in workshop_ids:
+        f.write(f"workshop_download_item 322330 {ids}\n")
+
+with open(os.path.join(os.path.dirname(__file__), "rename_workshop_ids.bat"), "w", encoding="utf-8") as f:
+    for ids in workshop_ids:
+        f.write(f"rename {ids} workshop-{ids}\n")
+```
+
+
+
 其原理是将存档内的`modoverrides.lua`MOD信息放到服务器中，让服务器加载相关MOD
 
 Master和Caves共享一个MOD列表，因此无需对其进行
@@ -259,9 +308,15 @@ workshop_download_item 322330
 
 ## 关于存档
 
+目录结构如下：
+
+![image-20241107194334303](./../assets/img/2024-11-03-Questions-DST_DedicatedServer解决方案/image-20241107194334303.png)
+
 ## 关于MOD下载
 
 ## 5. 启动服务器
+
+![image-20241107194511953](https://raw.githubusercontent.com/phil616/phil616.assets/main/phil616_picgo/image-20241107194511953.png)
 
 ## 5.1 启动内网穿透
 
