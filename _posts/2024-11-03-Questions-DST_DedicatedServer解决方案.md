@@ -316,7 +316,7 @@ workshop_download_item 322330
 
 ## 5. 启动服务器
 
-![image-20241107194511953](https://raw.githubusercontent.com/phil616/phil616.assets/main/phil616_picgo/image-20241107194511953.png)
+![image-20241107194511953](https://assets.phil616.greenshadecapital.com/phil616/phil616.assets/main/phil616_picgo/image-20241107194511953.png)
 
 ## 5.1 启动内网穿透
 
